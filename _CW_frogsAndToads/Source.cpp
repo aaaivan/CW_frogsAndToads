@@ -40,10 +40,10 @@ int main()
 		}
 		printBoard(board, false);	//print board without fog
 		std::cout << std::endl;
+		delete[] board.array;
+		board.array = nullptr;
 		if (playAgain())
 		{
-			delete[] board.array;
-			board.array = nullptr;
 			std::cout << "*********************************************************************************\n" << std::endl;
 		}
 		else
